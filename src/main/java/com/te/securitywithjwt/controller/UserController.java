@@ -22,7 +22,7 @@ public class UserController {
 
 	@Autowired
 	EmployeeServiceImpl employeeService;
-//	@PreAuthorize("USER")
+	@PreAuthorize("USER")
 	@PostMapping("/save")
 	public Employee saveEmployee(@RequestBody Employee employee) {
 		System.out.println(employee);
